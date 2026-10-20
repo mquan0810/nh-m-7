@@ -1,0 +1,134 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.7;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.nen-toi {
+    background-color: rgba(12, 25, 44, 0.78);
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+
+header {
+    text-align: center;
+    padding: 58px 20px 42px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 4px 0;
+}
+
+header p {
+    margin: 0;
+}
+
+.dong-nho {
+    color: #f5d48b;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: rgba(14, 29, 48, 0.91);
+    padding: 28px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9px;
+}
+
+h2 {
+    color: #f3d58c;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+.mo-ta {
+    color: #e4eaf2;
+}
+
+
+.dia-diem {
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dia-diem h3 {
+    color: #b8daf8;
+    font-size: 23px;
+    margin: 0 0 14px;
+}
+
+.anh-dia-diem {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 22px auto 0;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 700px) {
+    header {
+        padding: 40px 16px 30px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .dia-diem h3 {
+        font-size: 20px;
+    }
+}
+
+
+.kinh-nghiem ul {
+    padding-left: 24px;
+    margin-top: 8px;
+}
+.kinh-nghiem li {
+    margin-bottom: 10px;
+}
+.kinh-nghiem figure {
+    margin: 0 0 30px;
+}
+.kinh-nghiem figcaption {
+    font-size: 13px;
+    text-align: center;
+    color: #d1dae8;
+    margin-top: 8px;
+}
