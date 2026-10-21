@@ -1,0 +1,178 @@
+/* --- Reset cơ bản --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Nền tối mờ ảo đồng bộ giao diện DaNang Trip --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.75;
+  color: #cbd5e1;
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.92)), 
+    url('pexels-qui-nguyen-7862521-32303442.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* --- Thanh Header trên cùng --- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 22px 8%;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Khung nội dung căn giữa --- */
+.container {
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 0 24px 100px;
+}
+
+/* --- Ảnh Banner chính --- */
+.banner {
+  margin-bottom: 30px;
+}
+
+.banner img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* --- Đoạn văn giới thiệu mở đầu --- */
+.container > p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #e2e8f0;
+  text-align: justify;
+  margin-bottom: 50px;
+  background: rgba(30, 41, 59, 0.55);
+  backdrop-filter: blur(10px);
+  padding: 24px 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Tiêu đề phần danh sách món --- */
+.content h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #7da4f8;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+/* --- 3 nhãn thông tin nổi bật --- */
+.content > p {
+  display: inline-block;
+  background: rgba(125, 164, 248, 0.12);
+  color: #93c5fd;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(125, 164, 248, 0.25);
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+/* --- Khối thẻ từng món hải sản --- */
+.recipe-step {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 5px solid #7da4f8;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.recipe-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 164, 248, 0.45);
+}
+
+.recipe-step > div {
+  width: 100%;
+  order: -1;
+  margin-bottom: 6px;
+}
+
+.recipe-step h3 {
+  font-size: 1.35rem;
+  color: #7da4f8;
+  margin-bottom: 12px;
+}
+
+.recipe-step p {
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+/* --- Căn chỉnh các ảnh minh họa món ăn --- */
+.recipe-step img {
+  width: calc(50% - 7px);
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: block;
+}
+
+/* Món có 1 ảnh tự động hiển thị rộng 100% khung */
+.recipe-step img:only-of-type {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 400px;
+}
+
+/* --- Tối ưu hiển thị trên màn hình điện thoại --- */
+@media (max-width: 600px) {
+  header {
+    padding: 18px 20px;
+    font-size: 1.1rem;
+  }
+
+  .content h2 {
+    font-size: 1.7rem;
+  }
+
+  .content > p {
+    margin-bottom: 10px;
+  }
+
+  .recipe-step {
+    padding: 18px;
+  }
+
+  .recipe-step img,
+  .recipe-step img:only-of-type {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+}
